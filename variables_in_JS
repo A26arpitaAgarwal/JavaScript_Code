@@ -1,0 +1,26 @@
+//variables are container which stores data in it in the computer memory.
+//creating variables in JS
+
+// variable a contains 67, initialise with keyword var
+var a = 67;   
+
+// printing a
+console.log(a);
+
+//initialising a string into variable b
+var b = "Arpita" ;
+
+//printing b
+console.log(b);
+
+//variables through keyword let
+let c = "JavaScript";
+console.log(c);
+
+//variables through keyword const
+const d = "Hello";
+console.log(d);
+
+
+
+
