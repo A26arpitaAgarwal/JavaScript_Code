@@ -1,37 +1,34 @@
 //Number Guessing Game
 
-//Introducing variables
-let random_num = Math.round(Math.random() * 100);
-let guessed_num;
-let guess = 0;
-let score;
+console.log("!!Welcome to the number guessing game!!\n")
 
-//Implementing Logics
-do {
-  guessed_num = prompt(`Enter Your Guessed Number (0-100): `);
-  guessed_num = Number.parseInt(guessed_num);
-  guess++;
-  if (guessed_num > random_num) {
-    console.log(`The Number You Have Guessed Is Wrong.`); 
-    console.log(`\nThe guessed num is greater than target num`);
-    console.log(`Try Again: `);
+//Implementing variables
+let max = 100;
+let min = 0
+let randomNum = Math.floor(Math.random() * (max - min)) + min;
+let count = 0;
+let limit = 100
+
+//Implementing logic
+while (count <= limit) {
+  let gusNum = prompt("Enter a number: ");
+  let gussNumber = Number.parseInt(gusNum)
+  if (gussNumber === randomNum) {
+    console.log("\nYeahh!!!,\nCongratulations you have entered a currect number")
+    count++;
+
+    return;
   }
-  else if (guessed_num < random_num) {
-    console.log(`The Number You Have Guessed Is Wrong.`); 
-    console.log(`\nThe guessed num is less than target num`);
-    console.log(`Try Again: `);
+  else if (gussNumber < randomNum) {
+    console.log("Number is less then the Actual number")
+    count++;
+
   }
-  else {
-    console.log(`Good Job!`);
+  else if (gussNumber > randomNum) {
+    console.log("Number is greater then the Actual number")
+    count++;
+
   }
-} while (guessed_num != random_num);
-console.log(`\nThe Right Number Was ${random_num}`);
-console.log(`\nYou Needed ${guess} Guesses To Get The Right Number`);
-score = 100-guess+1;
-console.log(`You Scored: ${score}`);
-if(100<=score && score<=50){
-  console.log(`\nGreat Work, Keep Up The Good Luck!`);
 }
-else{
-  console.log(`\nBetter Luck Next Time!`);
-}
+console.log("Limit to enter number is finished")
+console.log("Actual Number is = " + randomNum)
